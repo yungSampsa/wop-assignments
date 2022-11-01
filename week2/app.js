@@ -19,4 +19,9 @@ app.delete('/cat', (req, res) => {
   res.send('With this endpoint you can delete cats.')
 })
 
+app.get('/cat/:id', (req, res) => {
+  console.log('/cat/:id', req.params.id);
+  res.send('You requested a cat whose id is ' + req.params.id);
+});
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
